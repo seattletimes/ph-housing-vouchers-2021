@@ -1,0 +1,193 @@
+@import "seattletimes";
+@import "flickity";
+
+@grayed: #aaa;
+@highlight: @df-orange-highlight;
+
+.small-mobile {
+  display: inline;
+  @media @smallMobile {
+    display: none;
+  }
+}
+
+
+.interactive {
+  max-width: 700px;
+  margin: auto;
+}
+
+.carousel-cell:nth-child(11) {
+  background-color: #f9ddcb !important;
+
+  span {
+    color: @highlight;
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
+}
+
+.container {
+  font-size: 0px;
+}
+
+.text-container {
+  margin: 0em auto 2em auto;
+  font-size: 18px;
+  vertical-align: top;
+  text-align: center;
+
+  .txt-block {
+    // margin-bottom: 2em;
+    width: 87%;
+    background-color: #eee;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 5px 10px;
+
+    p {
+      margin: 0px;
+      span {
+        color: @highlight;
+        font-weight: bold;
+        letter-spacing: 1px;
+      }
+    }
+  }
+}
+
+.org-container {
+  text-align: center;
+  font-size: 0px;
+  .block {
+    font-size: 0px;
+
+    &.one {
+      max-width: 250px;
+      margin: auto;
+    }
+
+    &.flex {
+      display: flex;
+      max-width: 470px;
+      margin: auto;
+    }
+
+    &.two {
+      max-width: 470px;
+      margin: auto;
+    }
+
+
+
+    .label {
+      font-size: 16px;
+      color: #858585;
+    }
+
+    .text {
+      font-size: 16px;
+      padding: 5px 10px;
+      background-color: @grayed;
+      color: white;
+      font-weight: bold;
+      line-height: 1.3em;
+
+
+
+      &.highlight {
+        background-color: @highlight;
+      }
+    }
+
+    .three {
+      // display: inline-block;
+      vertical-align: top;
+      width: ~"calc(100% / 3 - 5px)";
+      margin-right: 5px;
+    }
+
+    .houses {
+      font-size: 30px;
+      // letter-spacing: 5px;
+      @media @mobile {
+        font-size: 27px;
+      }
+      .hand {
+        // letter-spacing: 5px;
+        margin: 0px 10px;
+        display: inline-block;
+        background-color: @grayed;
+        color: white;
+        vertical-align: top;
+
+        @media @mobile {
+          margin: 0px 2px;
+        }
+
+        &.highlight {
+          background-color: @highlight;
+        }
+      }
+    }
+    .people {
+      font-size: 30px;
+      letter-spacing: 4px;
+
+      @media @mobile {
+        font-size: 24px;
+        letter-spacing: 0px;
+      }
+
+      .fa-users {
+        color: @grayed;
+        &.highlight {
+          color: @highlight;
+        }
+      }
+    }
+  }
+
+  .arrows {
+    margin: 5px auto;
+    font-size: 50px;
+    height: 30px;
+
+    @media @mobile {
+      font-size: 40px;
+      height: 25px;
+      margin: 5px auto;
+    }
+
+    .fa-caret-down, .fa-caret-up {
+      line-height: 0.5em;
+      opacity: 0.2;
+      vertical-align: top;
+      @media @mobile {
+        line-height: 0.6em;
+      }
+
+      &.highlight {
+        opacity: 1;
+        color: @highlight;
+      }
+    }
+
+
+    // .fa-caret-down {
+    //   animation: hover-down .5s infinite ease-in-out alternate;
+    // }
+    // .fa-caret-up {
+    //   animation: hover-up .5s infinite ease-in-out alternate;
+    //
+    // }
+  }
+}
+
+
+@keyframes hover-down {
+  100% { transform: translate3d(0, 15px, 0); }
+}
+@keyframes hover-up {
+  100% { transform: translate3d(0, -15px, 0); }
+}

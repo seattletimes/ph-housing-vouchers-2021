@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <%= t.include("partials/_head.html", grunt.data.json) %>
+    <% if (!json.project.embedded) { %>
+      <%= t.include("partials/_dataLayer.html") %>
+      <script src="https://seattle-times.zeustechnology.com/main.js" async></script>
+      <script src="https://www.seattletimes.com/wp-content/plugins/st-advertising/dist/st-projects-bundle.js" async></script>
+    <% } %>
+    <% if (json.project.production && !json.project.embedded) { %>
+      <%= t.include("partials/_gtm.html") %>
+    <% } %>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <% if (json.project.production && !json.project.embedded) { %>
+      <%= t.include("partials/_gtmNoScript.html") %>
+    <% } %>
+    <responsive-child class="interactive">
+      <h3 class="graphic-hed">
+            How emergency housing vouchers get to those who need them
+      </h3>
+      <h4 class="graphic-chatter">Emergency housing voucher allocations wind through several steps before they make it to the people who need them most.</h4>
+
+
+      <% doc = archieml.HousingVouchersInteractive %>
+      <!-- content goes here -->
+      <div class="container">
+        <div class="org-container">
+          <div class="block one down">
+            <div class="text hud">
+              HUD - federal government
+            </div>
+          </div>
+
+          <div id="hud" class="arrows">
+            <i class="fas fa-caret-down"></i>
+            <!-- <i class="fas fa-caret-up"></i> -->
+          </div>
+
+          <div class="block down flex">
+            <div class="three text ha">
+              King County Housing Authority
+            </div>
+            <div class="three text ha">
+              Renton Housing Authority
+            </div>
+            <div class="three text ha">
+              Seattle Housing Authority
+            </div>
+          </div>
+
+            <div id="ha" class="arrows">
+              <i class="fas fa-caret-down"></i>
+              <i class="fas fa-caret-up"></i>
+            </div>
+
+            <div class="block two down">
+              <div class="text kcrha">
+                King County Regional Homelessness Authority
+              </div>
+            </div>
+
+            <div id="kcrha" class="arrows">
+              <i class="fas fa-caret-down"></i>
+              <i class="fas fa-caret-up"></i>
+            </div>
+
+            <div class="block">
+              <div class="houses">
+                <div class="hand"><i class="fas fa-hand-holding-heart"></i></div>
+                <div class="hand"><i class="fas fa-hand-holding-heart chosen"></i></div>
+                <div class="hand"><i class="fas fa-hand-holding-heart"></i></div>
+                <div class="hand"><i class="fas fa-hand-holding-heart chosen"></i></div>
+                <div class="hand"><i class="fas fa-hand-holding-heart"></i></div>
+                <span class="small-mobile">
+                <div class="hand"><i class="fas fa-hand-holding-heart chosen"></i></div>
+                <div class="hand"><i class="fas fa-hand-holding-heart"></i></div>
+                </span>
+                <div class="hand"><i class="fas fa-hand-holding-heart chosen"></i></div>
+              </div>
+              <div class="label">Nonprofits</div>
+            </div>
+
+            <div id="nonprofits" class="arrows">
+              <i class="fas fa-caret-down"></i>
+              <i class="fas fa-caret-up"></i>
+            </div>
+
+            <div class="block">
+              <div class="people">
+                <!-- <i class="fas fa-users text-color"></i> -->
+                <i class="fas fa-users text-color"></i>
+                <i class="fas fa-users text-color"></i>
+                <i class="fas fa-users text-color"></i>
+                <i class="fas fa-users text-color"></i>
+                <i class="fas fa-users text-color"></i>
+                <i class="fas fa-users text-color"></i>
+                <i class="fas fa-users text-color"></i>
+                <span class="small-mobile">
+                <i class="fas fa-users text-color"></i>
+                <i class="fas fa-users text-color"></i>
+                <i class="fas fa-users text-color"></i>
+                </span>
+                <!-- <i class="fas fa-users text-color"></i> -->
+                <i class="fas fa-users text-color last"></i>
+              </div>
+              <div class="label">Voucher applicants</div>
+            </div>
+
+
+
+          </div>
+
+          <div class="text-container">
+            <!-- <div class="person">
+              <i class="fas fa-user"></i>
+            </div> -->
+            <div class="main-carousel">
+            <% doc.sections.forEach(function(s) { %>
+              <% if (s.type === "looper") { %>
+                <div class="txt-block carousel-cell quoteGallery" data-arrow="<%= s.value.class %>" data-dir="<%= s.value.direction %>">
+                <p class="text"><%= s.value.text %></p>
+              </div>
+              <% } %>
+            <% } ) %>
+            </div>
+          </div>
+        </div>
+        <figcaption class="source-container">
+          <p class="data-source">Source:
+            <a href="https://kcrha.org/" target="_blank" rel="nofollow noreferrer noopener">
+              King County Regional Homelessness Authority
+            </a>
+          </p>
+          <p class="art-credit">Lauren Flannery / The Seattle Times</p>
+        </figcaption>
+    </responsive-child>
+
+    <script src="app.js" async></script>
+    <% if (json.project.production) { %>
+    <%= !json.project.embedded ? t.include("partials/_analytics.html") : "" %>
+    <%= t.include("partials/_workHere.html") %>
+    <% } %>
+  </body>
+</html>

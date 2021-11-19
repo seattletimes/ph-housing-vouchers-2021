@@ -1,0 +1,22 @@
+{
+  "s3": {
+    "stage": {
+      "bucket": "projects-staging.seattletimes.com",
+      "path": "down-slick"
+    },
+    "live": {
+      "bucket": "projects.seattletimes.com",
+      "path": "2021/local/seattle-emergency-housing-voucher-process"
+    }
+  },
+  "title": "",
+  "description": "",
+  "author": "",
+  "url": "",
+  "post_id": 0,
+  "image": "assets/social.jpg",
+  "sheets": [],
+  "docs": ["1fECy3izvLp3hFgeQJ0CuCYjnxyB6qiD1I5NqRJ05QH8"],
+  "embedded": true,
+  "production": true
+}

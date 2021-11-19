@@ -1,0 +1,73 @@
+Pre-interactive brainstorm: https://docs.google.com/document/d/1-IxtUcMbpOHlbWs1Nt2dyUhzepAfLubwbH1AeYB1rX4/edit?usp=sharing
+
+[+sections]
+{.looper}
+class: hud
+direction: down
+Lauren direction: HUD highlights, arrow points down to HAs
+text: <span>HUD distributes 1,314 housing vouchers</span> in May to three public housing authorities in the Seattle area.
+{}
+
+{.looper}
+class: ha
+direction: down
+text: The<span> three housing agencies</span> coordinate with the Regional Homelessness Authority.
+{}
+
+{.looper}
+class: kcrha
+direction: down
+text: The <span>Regional Homelessness Authority</span> surveys service providers and community organizations. It also creates an algorithm to distribute voucher referral slots to more than 60 of these organizations based on whom those organizations serve. This takes several weeks.
+{}
+
+{.looper}
+class: nonprofits
+direction: down
+text: These <span>organizations</span> then contact people they see as good candidates for the vouchers.
+{}
+
+{.looper}
+class: people
+direction: up
+text: <span>Voucher applicants</span> work with the nonprofit organizations to complete the applications.
+{}
+
+{.looper}
+class: KCRHA
+direction: up
+text: And then the <span>nonprofit organizations</span> submit the paperwork back to the Regional Homelessness Authority.
+{}
+
+{.looper}
+class: KCRHA
+direction: up
+text: The <span>Regional Homelessness Authority</span> screens applications before sending them to the housing authorities. 
+{}
+
+{.looper}
+class: HA
+direction: up
+text: The housing authorities give <span>people</span> their vouchers. 
+{}
+
+{.looper}
+class: nonprofits
+direction: up
+text: But some nonprofits say it’s difficult to get paperwork in order quickly for vulnerable clients. Many of those people, especially those who live outdoors, have had their connections to services severed since the pandemic began. As of Nov. 11, <span>only 531 referrals</span>, about 40% of available vouchers, had been submitted to the Regional Homelessness Authority.
+{}
+
+
+
+{.looper}
+class: people?
+direction: up
+text: Now voucher holders look for housing on the private market. They work with nonprofits to help them do so, but obstacles lie ahead. Voucher holders often have a hard time finding housing in tight rental markets. 
+{}
+
+{.looper}
+class: fade out
+direction: NA
+text: Six months after HUD allocated vouchers to housing authorities, <span>just 10 people</span> in the Seattle area have been able to use them to sign a lease.
+{}
+
+[]
