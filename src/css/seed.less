@@ -15,6 +15,14 @@
 .interactive {
   max-width: 700px;
   margin: auto;
+
+  min-height: 835px;
+  @media @mobile {
+    min-height: 1000px;
+  }
+  @media @smallMobile {
+    min-height: 1230px;
+  }
 }
 
 .carousel-cell:nth-child(11) {
